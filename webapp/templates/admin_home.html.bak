@@ -1,0 +1,7 @@
+{% extends 'userbase.html' %}
+{% block content %}
+<center><h3>{{m}}</h3></center><br>
+<h2>Welcome {{data.name}} </h1>
+<br><br>
+<center><h3>Welcome to Hotel A</h3></center>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'adminbase.html' %}
+
+{% load static %}
+{% block content %}
+<h2>{{msg}}</h5>
+
+<center>
+<table width="60%">
+
+<tr><td><img src="{% static 'images/i1.jpg' %}" width="240" height="260" border="0" alt="">
+<br><center><h4>Delux Room <br>Price- $ 100
+<td><img src="{% static 'images/i2.jpg' %}" width="240" height="260" border="0" alt="">
+<br><center><h4>Heritage Room<br>Price- $ 150
+<td><img src="{% static 'images/i3.jpg' %}" width="240" height="260" border="0" alt="">
+<br><center><h4>Suite Room<br>Price- $ 200
+
+</table>
+<br><br><br>
+<form method="get" action="/check/">
+	<input type="submit" value="Check Availability">
+</form>
+
+
+{% endblock %}

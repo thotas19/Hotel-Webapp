@@ -1,0 +1,22 @@
+{% extends 'userbase.html' %}
+{% load static %}
+{% block content %}
+<h5>{{msg}}</h5>
+
+<center>
+<form method="post" action="/userhome2/">
+	{% csrf_token %} 
+	<table width="50%" id="">
+
+<tr><td><h4>Card Number<td><input type="text" required name="c1" >
+<tr><td><h4>CVV<td><input type="text" required name="c2" >
+<tr><td><h4>OTP<td><input type="text" required name="no" >
+
+<tr><td><h4><td>
+<input type="submit" value="Submit">
+</table>
+
+<br><br>
+<h3>Thank you for booking</h3>
+</form>
+{% endblock %}

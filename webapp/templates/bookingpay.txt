@@ -1,0 +1,45 @@
+{% extends 'userbase.html' %}
+{% load static %}
+{% block content %}
+<h5>{{msg}}</h5>
+
+<center>
+<table width="60%">
+
+<tr><td><h4><img src="{% static 'images/i1.jpg' %}" width="240" height="260" border="0" alt="">
+<br><center><h4>Delux Room <br>Price- $ 100
+<td><img src="{% static 'images/i2.jpg' %}" width="240" height="260" border="0" alt="">
+<br><center><h4>Heritage Room<br>Price- $ 150
+<td><img src="{% static 'images/i3.jpg' %}" width="240" height="260" border="0" alt="">
+<br><center><h4>Suite Room<br>Price- $ 200
+
+</table>
+<br><br><br>
+<form method="get" action="/check/">
+	<input type="submit" value="Check Availability">
+</form>
+<br>	
+<form method="post" action="/booking/">
+	{% csrf_token %} 
+	<table width="50%" id="">
+
+<tr><td><h4>Check-in Date<td><input type="date" required name="c1" >
+<tr><td><h4>Check-out Date<td><input type="date" required name="c2" >
+<tr><td><h4>Name<td><input type="text" required name="no" >
+<tr><td><h4>Email<td><input type="text" required name="email" >
+<tr><td><h4>Phone Number<td><input type="text" required name="ph" >
+<tr><td><h4>Type of room<td>
+<select name="st">
+	<option value="Delux" selected>Delux Room
+	<option value="Heritage">Heritage Room
+	<option value="Suite">Suite Room 
+</select>
+
+<tr><td><h4><td>
+<input type="submit" value="Submit">
+</table>
+
+<br><br>
+
+</form>
+{% endblock %}
